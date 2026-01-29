@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Javista Coffee — Sıcak ve Şık</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://javista.com.tr/favicon.ico">
+    <link rel="icon" href="https://javista.com.tr/_next/image?url=%2Fjavista.gif&w=1200&q=75" type="image/gif">
+    <link rel="apple-touch-icon" href="https://javista.com.tr/_next/image?url=%2Fjavista.gif&w=1200&q=75">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="brand">
+                <img class="logo" src="https://javista.com.tr/favicon.ico" alt="Javista logo" width="56" height="56">
+                <div>
+                    <div style="font-weight:700">Javista Coffee</div>
+                    <div style="font-size:12px;color:var(--muted)">Sıcak. Samimi. Lezzetli.</div>
+                </div>
+            </div>
+            <nav>
+                <a href="https://www.javista.com.tr/Menu.pdf" target="_blank">Menü</a>
+                <a href="#about">Hakkında</a>
+            </nav>
+        </header>
+        <main class="hero">
+            <div class="hero-left">
+                <h1 class="title fade-up" style="animation-delay:.1s">Günün en iyi molası burada başlar</h1>
+                <p class="lead fade-up" style="animation-delay:.25s">Taze çekirdekler, el yapımı tarifler ve samimi bir atmosfer. Sade ama özenli bir kahve deneyimi.</p>
+                <a class="cta fade-up" style="animation-delay:.4s" href="https://www.javista.com.tr/Menu.pdf" target="_blank">Menüyü İncele</a>
+            </div>
+            <div class="hero-right">
+                <div class="card fade-up" style="animation-delay:.2s">
+                    <div class="cup">
+                        <img src="https://javista.com.tr/_next/image?url=%2Fjavista.gif&w=1200&q=75" alt="Kahve" />
+                        <div class="steam">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section id="menu" class="menu">
+            <div style="max-width:1100px;margin:0 auto">
+                <h2 style="font-family:Playfair Display,serif;font-size:28px;margin:0 0 18px">Öne Çıkanlar</h2>
+                <div class="cards">
+                    <div class="item fade-up" style="animation-delay:.1s">
+                        <div class="dot">E</div>
+                        <div>
+                            <h4>Espresso</h4>
+                            <p>Klasik, yoğun ve dengeli.</p>
+                        </div>
+                    </div>
+                    <div class="item fade-up" style="animation-delay:.2s">
+                        <div class="dot">L</div>
+                        <div>
+                            <h4>Latte</h4>
+                            <p>Yumuşak süt köpüğü ile.</p>
+                        </div>
+                    </div>
+                    <div class="item fade-up" style="animation-delay:.3s">
+                        <div class="dot">C</div>
+                        <div>
+                            <h4>Cappuccino</h4>
+                            <p>Klasik köpük ve tarçın dokunuşu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" style="padding:36px 6vw;">
+            <div style="max-width:900px;margin:0 auto;text-align:center">
+                <h3 style="font-family:Playfair Display,serif;margin-bottom:8px">Samimi bir buluşma noktası</h3>
+                <p style="color:var(--muted);margin:0 auto;max-width:700px">Turuncunun enerjik dokunuşlarıyla harmanlanmış, sıcak ve rahat bir atmosferde kahvenizi keyifle yudumlayın.</p>
+            </div>
+        </section>
+        <footer>
+            <div>Adres: 5.Levent Mahallesi, İstanbul</div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            const els=document.querySelectorAll('.fade-up');
+            els.forEach((el,i)=>{el.style.animationDelay=(parseFloat(getComputedStyle(el).animationDelay)||0)+'s'});
+            let last=0;window.addEventListener('scroll',()=>{const st=window.scrollY; if(Math.abs(st-last)>60){document.querySelectorAll('.fade-up').forEach(e=>e.style.animation='fadeUp .8s forwards'); last=st}});
+        });
+    </script>
+</body>
+</html>
